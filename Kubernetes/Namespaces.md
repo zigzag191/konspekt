@@ -22,15 +22,15 @@ kubectl api-resources
 #### Некоторые команды
 - Получить информацию про Namespace:
   ```bash
-kubectl describe ns default
+  kubectl describe ns default
   ```
 - К командам kubectl можно добавить параметр ```-n```, чтобы отфильтровать результат по Namespace (или ```--all-namespaces```, чтобы вернуть объекты из всех Namespaces). Получить все Services в kube-system Namespace:
   ``` bash
-kubectl get svc --namespace kube-system
+  kubectl get svc --namespace kube-system
   ```
 - Настроить kubeconfig, чтобы все последующие команды kubectl выполнялись для определённого Namespace:
   ```bash
-kubectl config set-context --current --namespace mysupernamespace
+  kubectl config set-context --current --namespace mysupernamespace
   ```
 
 Чтобы при декларативном создании объекта отнести его к определённому Namespace, необходимо указать название Namespace в поле ```metadata.namespace```:
