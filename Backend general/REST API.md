@@ -1,5 +1,18 @@
 > REST provides a set of architectural constraints that, when applied as a whole, emphasizes scalability of component interactions, generality of interfaces, independent deployment of components, and intermediary components to reduce interaction latency, enforce security, and encapsulate legacy systems.
 
+**Основные принципы REST**:
+- URI для каждого объекта
+- Методы HTTP соответствуют основным операциям в БД:
+    * GET = SELECT
+    * POST = INSERT
+    * PUT = UPDATE
+    * DELETE = DELETE
+- Swagger для документирования
+- Параметры в URI:
+    * Как параметры GET запроса
+    * Как часть URI
+    * Параметры POST запроса
+
 ### Проблема получения нескольких ресурсов через один запрос
 В терминологии REST ресурс обычно относится к определённой бизнес-сущности. Поэтому если клиенту необходимо получить данные о связанных сущностях, он вынужден использовать несколько сетевых запросов. Для решения этой проблемы можно на стороне сервера при формировании ответа дополнительно включать информацию о связанных объектах. Глубину передаваемого графа объектов можно контролировать через входные параметры запроса:
 ```
